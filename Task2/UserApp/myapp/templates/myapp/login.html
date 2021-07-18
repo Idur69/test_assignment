@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/login.css' %}" />
+  </head>
+
+  <body>
+    <div class="set-login-bg">
+      <h2>Login</h2>
+      <span id="msg"></span>
+      <form method="POST">
+        {% csrf_token %}
+        <p>User Name</p>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="User Name"
+          required
+          autofocus
+        />
+        <p>Password</p>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+        /><br /><br /><br />
+        <button type="submit">Login</button>
+        <span class="helper"
+          >Please enter a correct username and password. Note that both fields
+          may be case-sensitive.</span
+        >
+        <p id="link-to-signup">
+          Don't have an account ?
+          <a href="{% url 'users-register' %}">Sign Up</a>.
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

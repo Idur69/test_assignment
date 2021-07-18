@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'myapp/css/logout.css' %}" />
+    <title>Logout Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>You have been Logged Out</h1>
+      <span class="info"
+        >Want to sign in again?
+        <a href="{% url 'users-login' %}">Sign In</a></span
+      >
+    </div>
+  </body>
+</html>

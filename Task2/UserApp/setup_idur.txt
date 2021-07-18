@@ -1,0 +1,21 @@
+
+1. If create new table or modified table in models.py file
+
+--> python manage.py  makemigrations
+2. Migrate 
+--> python manage.py  migrate
+
+3. Runserver.
+--> python manage.py runserver
+
+
+4. if not there sqlite3 in your environment
+--> sudo apt-get install sqlite3 libsqlite3-dev
+
+5. Enter into dbshell to check database table data.
+--> python manage.py dbshell
+
+--> tables
+
+--> select * from table_name
+
